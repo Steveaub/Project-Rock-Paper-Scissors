@@ -8,19 +8,14 @@
 // define function that determines user choice
 // compare computer and user choice than determine 
 
-function getComputerChoice (Rock,Paper,Scissors){
-    const choice = ["Rock","Paper","Scissors"] ;
+
+const choice = ["Rock","Paper","Scissors"];
+
+const randomChoice = choice [Math.floor(Math.random() * choice.length)];
   
-}
+console.log (randomChoice)
+console.log (randomChoice)
+console.log (randomChoice)
 
-console.log(getComputerChoice())
+console.log (randomChoice)
 
- let countries = ["Haiti","Spain","USA"]
-
- countries [3] = "Africa";
-
- console.log(countries)
-
- let colors = ["blues","green","red",["yellow","Purple","orange"]]
-
- console.log(colors[2]);
