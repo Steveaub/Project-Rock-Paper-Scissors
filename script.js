@@ -7,3 +7,20 @@
 // define function That determines computer choice 
 // define function that determines user choice
 // compare computer and user choice than determine 
+
+function getComputerChoice (Rock,Paper,Scissors){
+    const choice = ["Rock","Paper","Scissors"] ;
+  
+}
+
+console.log(getComputerChoice())
+
+ let countries = ["Haiti","Spain","USA"]
+
+ countries [3] = "Africa";
+
+ console.log(countries)
+
+ let colors = ["blues","green","red",["yellow","Purple","orange"]]
+
+ console.log(colors[2]);
