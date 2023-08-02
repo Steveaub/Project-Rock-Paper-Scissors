@@ -9,13 +9,15 @@
 // compare computer and user choice than determine 
 
 
+function GetComputerChoice () {
+
 const choice = ["Rock","Paper","Scissors"];
 
-const randomChoice = choice [Math.floor(Math.random() * choice.length)];
-  
-console.log (randomChoice)
-console.log (randomChoice)
-console.log (randomChoice)
+return choice [Math.floor(Math.random() * choice.length)];
 
-console.log (randomChoice)
+}
+
+console.log (GetComputerChoice())
+console.log (GetComputerChoice())
+console.log (GetComputerChoice())
 
