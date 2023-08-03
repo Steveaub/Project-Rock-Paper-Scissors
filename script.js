@@ -27,7 +27,11 @@ function playRound(playerSelection, computerSelection) {
   computerSelection.toLowerCase();
  if ( playerSelection === "rock" && computerSelection === "Rock") {
         return "its a tie!"
-    } 
+    } else if ( playerSelection === "rock" && computerSelection === "Scissors") {
+         return "You win! rock beats scissors"
+    } else (playerSelection === "rock" && computerSelection === "Paper") 
+         return "You lose! paper beats rock"
+    
   }
 
   const playerSelection = "rock";
