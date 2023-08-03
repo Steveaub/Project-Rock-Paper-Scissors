@@ -23,7 +23,8 @@ console.log (getComputerChoice());
 
 
 function playRound(playerSelection, computerSelection) {
-  
+  playerSelection.toLowerCase();
+  computerSelection.toLowerCase();
  if ( playerSelection === "rock" && computerSelection === "Rock") {
         return "its a tie!"
     } 
