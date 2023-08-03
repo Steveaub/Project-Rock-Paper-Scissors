@@ -9,15 +9,26 @@
 // compare computer and user choice than determine 
 
 
-function GetComputerChoice () {
+function getComputerChoice () {
 
 const choice = ["Rock","Paper","Scissors"];
 
-return choice [Math.floor(Math.random() * choice.length)];
-
+return choice [Math.floor(Math.random() * choice.length )];
 }
 
-console.log (GetComputerChoice())
-console.log (GetComputerChoice())
-console.log (GetComputerChoice())
+console.log (getComputerChoice());
+console.log (getComputerChoice());
+console.log (getComputerChoice());
+console.log (getComputerChoice());
 
+
+function playRound(playerSelection, computerSelection) {
+  
+ if ( playerSelection === "rock" && computerSelection === "Rock") {
+        return "its a tie!"
+    } 
+  }
+
+  const playerSelection = "rock";
+const computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
