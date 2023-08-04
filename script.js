@@ -76,7 +76,7 @@ function game () {
  
 for (let i = 0; i < 5; i++) {
   let result = playRound();
-  console.log(playRound());
+  console.log(result);
 }
 
 }
