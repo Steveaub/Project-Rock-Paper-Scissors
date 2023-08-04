@@ -22,37 +22,64 @@ function getComputerChoice () {
   
   function playRound() {
   
-    let playerSelection = "rock";
+    let playerSelection = prompt("Please enter your choice: rock, paper, or scissors");
+
     let computerSelection = getComputerChoice();
+    
     
     playerSelection = playerSelection.toLowerCase();
     computerSelection = computerSelection.toLowerCase();
    
     
-if ( playerSelection === "rock" && computerSelection === "rock") {
-  return " It's a Tie!"
+if ( playerSelection === computerSelection) {
+  console.log("It's a tie!")
+  return 0;
 }   else if (playerSelection === "rock" && computerSelection === "paper") {
-  return "You lose! paper beats rock."
+  console.log(  "You lose! paper beats rock.");
+  return -1;
 }   else if (playerSelection === "rock" && computerSelection === "scissors") {
-  return "You win! rock beats scissors."
+  console.log("You win! rock beats scissors.")
+  return 1;
 }   else if (playerSelection === "paper" && computerSelection === "scissors"){
-  return "You lose! scissors beats paper."
-}   else if (playerSelection === "paper" && computerSelection === "paper") {
-  return " It's a Tie!"
+  console.log( "You lose! scissors beats paper.")
+  return -1
+// }   else if (playerSelection === "paper" && computerSelection === "paper") {
+//   console.log("It's a tie!")
+//   return 0;
 }  else if (playerSelection === "paper" && computerSelection === "rock") {
-  return "You Win! paper beats rock."
+  console.log ("You Win! paper beats rock.")
+  return 1;
 }   else if (playerSelection === "scissors" && computerSelection === "rock"){
-  return "You lose! rock beats scissors."
+  console.log( "You lose! rock beats scissors.")
+  return -1;
 }   else if (playerSelection === "scissors" && computerSelection === "paper"){
-  return "You win! scissors beats paper"
-}   else if (playerSelection === "scissors" && computerSelection === "scissors"){
-  return " It's a Tie!"
-} 
-    
-
-    
-    
-  console.log(playRound());
-  
+  console.log( "You win! scissors beats paper")
+  return 1;
+// }   else if (playerSelection === "scissors" && computerSelection === "scissors"){
+//   console.log("It's a tie!")
+//   return 0;
+} else {
+  return "Invalid entry. Choose from one of the three choices rock, paper, or scissors";
 }
+
+}
+
+console.log(playRound());
+
+
+
+
+function game () {
+  
+  let playerScore = 0;
+  let computerScore = 0;
  
+for (let i = 0; i < 5; i++) {
+  let result = playRound();
+  console.log(playRound());
+}
+
+}
+
+
+console.log(game());
