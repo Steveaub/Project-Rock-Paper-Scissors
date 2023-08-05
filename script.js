@@ -69,17 +69,53 @@ console.log(playRound());
 
 
 
-function game () {
+// function game () {
   
-  let playerScore = 0;
-  let computerScore = 0;
+//   let playerScore = 0;
+//   let computerScore = 0;
  
-for (let i = 0; i < 5; i++) {
-  let result = playRound();
-  console.log(result);
-}
+// for (let i = 0; i < 5; i++) {
+//   let result = playRound();
+//   console.log(result);{
 
-}
+//   }
+// }
+
+// }
 
 
 console.log(game());
+
+
+
+
+
+function game() {
+  let playerScore = 0;
+  let computerScore = 0;
+  
+  for(let i = 0; i < 5; i++) {
+      let result = playRound();
+
+      if(result === 1) {
+          playerScore++;
+      } else if(result === -1) {
+          computerScore++;
+      } else if (typeof result === "string") {
+          console.log(result);
+          i--;  // repeat the round if invalid input was given
+      }
+
+      console.log(`Player: ${playerScore}, Computer: ${computerScore}`);
+  }
+
+  if(playerScore > computerScore) {
+      console.log("Player wins the game!");
+  } else if (playerScore < computerScore) {
+      console.log("Computer wins the game!");
+  } else {
+      console.log("The game is a tie!");
+  }
+}
+
+game();
