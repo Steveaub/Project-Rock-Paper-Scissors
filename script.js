@@ -52,7 +52,7 @@ function game() {
 
   for (let i = 0; i < 5; i++) {
     let result = playRound();
-
+  
 
 
 
@@ -61,9 +61,12 @@ function game() {
 
     } else if (result === -1) {
       computerScore++
-    } else if (typeof result === "string") {
-      i--;
+    } else if (typeof result !== "rock","paper","scissors") {
+     i--
     }
+
+    console.log(`Player: ${playerScore}, Computer: ${computerScore}`);
+
 
     
   }
