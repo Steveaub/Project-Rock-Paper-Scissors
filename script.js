@@ -59,7 +59,9 @@ const scissors = document.createElement("button");
 scissors.textContent = "scissors";
 
 
-rock.addEventListener()
+rock.addEventListener("click",playRound);
+paper.addEventListener("click",playRound);
+scissors.addEventListener("click",playRound);
 
 
 divForbuttons.appendChild(rock);
