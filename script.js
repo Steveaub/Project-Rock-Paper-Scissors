@@ -1,64 +1,86 @@
 
 
 function getComputerChoice() {
-  const choice = ["Rock", "Paper", "scissors"]
+  const choice = ["rock", "paper", "scissors"]
   return choice[Math.floor(Math.random() * choice.length)];
 
 }
 
-console.log(getComputerChoice())
+
 
 
 
 function playRound(userChoice) {
 
+  
+
+
   let playerSelection = userChoice;
   let computerSelection = getComputerChoice();
 
+ 
+
+  let playerScore = 0;
+  let computerScore = 0;
+  playerPoint.textContent = `Player Score ${playerScore}`;
+  computerPoint.textContent = `Computer Score ${computerScore}`;
 
 
   if (playerSelection === computerSelection) {
-    result.textContent = "It's a tie!";
+    gameResults.textContent = "its a tie!"
     return 0
 
   } else if (playerSelection === "rock" && computerSelection === "paper" ||
     playerSelection === "paper" && computerSelection === "scissors" ||
     playerSelection === "scissors" && computerSelection === "rock") {
 
-      result.textContent = `You lose! ${computerSelection} beats ${playerSelection}.`;
-    return -1
-
+    roundResults.textContent = `You lose! ${computerSelection} beats ${playerSelection}.`;
+    computerScore++
+    computerPoint.textContent = `Computer Score ${computerScore}`;
+  
   } else if (playerSelection === "rock" && computerSelection === "scissors" ||
     playerSelection === "paper" && computerSelection === "rock" ||
     playerSelection === "scissors" && computerSelection === "paper") {
 
-      result.textContent = `You win! ${playerSelection} beats ${computerSelection}.`;
+    roundResults.textContent =`You win! ${playerSelection} beats ${computerSelection}.`;
+    playerScore++ ;
+    playerPoint.textContent = `Player Score${playerScore}`;
+  
+  } 
 
-  } else {
-    result.textContent = "Invalid Entry. Please chose rock, paper, or scissors.";
-  }
 
+  if (playerScore >= 5 || computerScore >= 5) {
+    if (playerScore > computerScore) {
+      winnerWinner.textContent = `Congratulations! You win! Player beats computer.`;
+      console.log("Player wins the game!");
+    } else {
+      winnerWinner.textContent = `Oh Spaghettios! You lose! Computer beats player.`;
+      console.log("Computer wins the game!");
+    }
+
+}
 }
 
 
 
+  
 
 
 
+const roundResults = document.getElementById("gameResult");
+const winnerWinner = document.getElementById("gameWinner")
+
+const gameScore = document.getElementById("gameScore");
+const computerPoint = document.getElementById("computerPoint");
+const playerPoint = document.getElementById("playerPoint");
 
 
 
-const rock = document.getElementById("rock").addEventListener("click",()=> playRound("rock"));
-const paper = document.getElementById("paper").addEventListener("click",()=> playRound("paper"));
-const scissors = document.getElementById("scissors").addEventListener("click",()=> playRound("scissors"));
+const rock = document.getElementById("rock").addEventListener("click",()=>playRound("rock"));
+const paper = document.getElementById("paper").addEventListener("click",()=>playRound("paper"));;
+const scissors = document.getElementById("scissors").addEventListener("click",()=>playRound("scissors"));;
 
 
-// select/create parent
-// select/create child 
-// content 
-// append
-
-const result = document.getElementById("gameResults");
 
 
 
