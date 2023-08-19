@@ -50,7 +50,9 @@ function playRound(userChoice) {
     roundResults.textContent =`You win! ${playerSelection} beats ${computerSelection}.`;
     roundResults.className = 'animate__animated animate__fadeIn'; 
     playerScore++ ;
-    playerPoint.textContent = `Player Score${playerScore}`;
+    playerPoint.textContent = "Player Score 1";
+
+    // playerPoint.textContent = `Player Score ${playerScore}`;
   
   } 
 
