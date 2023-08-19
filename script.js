@@ -22,7 +22,7 @@ function playRound(userChoice) {
  
 
   
-  playerPoint.textContent = "Player Score " + `${playerScore}`;
+  playerPoint.textContent = "Player Score: " + `${playerScore}`;
 ;
   computerPoint.textContent = `Computer Score ${computerScore}`;
 
@@ -51,7 +51,7 @@ function playRound(userChoice) {
     roundResults.textContent =`You win! ${playerSelection} beats ${computerSelection}.`;
     roundResults.className = 'animate__animated animate__fadeIn'; 
     playerScore++ ;
-    playerPoint.textContent = "Player Score " + `${playerScore}`;
+    playerPoint.textContent = "Player Score: " + `${playerScore}`;
 
 
   
