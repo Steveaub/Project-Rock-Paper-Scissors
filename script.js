@@ -6,7 +6,8 @@ function getComputerChoice() {
 
 }
 
-
+let playerScore = 0;
+  let computerScore = 0;
 
 
 
@@ -20,14 +21,13 @@ function playRound(userChoice) {
 
  
 
-  let playerScore = 0;
-  let computerScore = 0;
+  
   playerPoint.textContent = `Player Score ${playerScore}`;
   computerPoint.textContent = `Computer Score ${computerScore}`;
 
 
   if (playerSelection === computerSelection) {
-    gameResults.textContent = "its a tie!"
+    roundResults.textContent = "its a tie!"
     return 0
 
   } else if (playerSelection === "rock" && computerSelection === "paper" ||
@@ -49,17 +49,17 @@ function playRound(userChoice) {
   } 
 
 
-  if (playerScore >= 5 || computerScore >= 5) {
-    if (playerScore > computerScore) {
-      winnerWinner.textContent = `Congratulations! You win! Player beats computer.`;
-      console.log("Player wins the game!");
-    } else {
-      winnerWinner.textContent = `Oh Spaghettios! You lose! Computer beats player.`;
-      console.log("Computer wins the game!");
-    }
+  if (playerScore === 5 && computerScore < 5) {
+    winnerWinner.textContent = "Congratulations!!!!!! Player wins the game!"
 
-}
-}
+  } else if (playerScore > 5 && computerScore === 5){
+    winnerWinner.textContent = "Oh Spaghettios! You lose! Computer beats player."
+  }
+
+  }
+
+
+
 
 
 
@@ -67,7 +67,8 @@ function playRound(userChoice) {
 
 
 
-const roundResults = document.getElementById("gameResult");
+const roundResults = document.getElementById("roundResults");
+
 const winnerWinner = document.getElementById("gameWinner")
 
 const gameScore = document.getElementById("gameScore");
