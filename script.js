@@ -26,9 +26,13 @@ function playRound(userChoice) {
   computerPoint.textContent = `Computer Score ${computerScore}`;
 
 
+  if (computerScore ===5 || playerScore===5){
+    return 
+  }
+
   if (playerSelection === computerSelection) {
     roundResults.textContent = "its a tie!"
-    return 0
+    
 
   } else if (playerSelection === "rock" && computerSelection === "paper" ||
     playerSelection === "paper" && computerSelection === "scissors" ||
@@ -49,12 +53,18 @@ function playRound(userChoice) {
   } 
 
 
-  if (playerScore === 5 && computerScore < 5) {
+  if (playerScore >= 5 && computerScore < 5) {
     winnerWinner.textContent = "Congratulations!!!!!! Player wins the game!"
-
-  } else if (playerScore > 5 && computerScore === 5){
+    document.getElementById("rock").disabled = true;
+    document.getElementById("paper").disabled = true;
+    document.getElementById("scissors").disabled = true;
+  } else if ( computerScore >= 5){
     winnerWinner.textContent = "Oh Spaghettios! You lose! Computer beats player."
+    document.getElementById("rock").disabled = true;
+    document.getElementById("paper").disabled = true;
+    document.getElementById("scissors").disabled = true;
   }
+
 
   }
 
