@@ -24,7 +24,7 @@ function playRound(userChoice) {
   
   playerPoint.textContent = "Player Score: " + `${playerScore}`;
 ;
-  computerPoint.textContent = `Computer Score ${computerScore}`;
+  computerPoint.textContent = `Computer Score: ${computerScore}`;
 
 
   if (computerScore ===5 || playerScore===5){
@@ -42,7 +42,7 @@ function playRound(userChoice) {
     roundResults.textContent = `You lose! ${computerSelection} beats ${playerSelection}.`;
     roundResults.className = 'animate__animated animate__fadeIn'; 
     computerScore++
-    computerPoint.textContent = `Computer Score ${computerScore}`;
+    computerPoint.textContent = `Computer Score: ${computerScore}`;
   
   } else if (playerSelection === "rock" && computerSelection === "scissors" ||
     playerSelection === "paper" && computerSelection === "rock" ||
