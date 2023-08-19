@@ -22,7 +22,7 @@ function playRound(userChoice) {
  
 
   
-  playerPoint.textContent = `Player Score ${playerScore}`;
+  playerPoint.textContent = "Player Score 1";
   computerPoint.textContent = `Computer Score ${computerScore}`;
 
 
