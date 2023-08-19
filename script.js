@@ -73,10 +73,6 @@ function playRound(userChoice) {
 
 
 
-  
-
-
-
 const roundResults = document.getElementById("roundResults");
 
 const winnerWinner = document.getElementById("gameWinner")
