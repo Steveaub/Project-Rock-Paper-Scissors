@@ -1,101 +1,103 @@
 /* Basic Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Global Styles */
 body {
-    background: linear-gradient(to right, #03001e, #7303c0, #ec38bc, #fdeff9);
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100vh;
-    color: white;
-    padding-top: 50px;
+  background: linear-gradient(to right, #03001e, #7303c0, #ec38bc, #fdeff9);
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  color: white;
+  padding-top: 50px;
 }
 
 /* Game Title */
 #gameTitle {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px #000000;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 /* Stylish Buttons */
 button {
-    padding: 15px 25px;
-    font-size: 20px;
-    border: none;
-    border-radius: 50px;
-    margin: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    transition: all 0.3s;
-    background: rgba(0, 0, 0, 0.5);
+  padding: 15px 25px;
+  font-size: 20px;
+  border: none;
+  border-radius: 50px;
+  margin: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  transition: all 0.3s;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 button:active {
-    transform: translateY(1px);
+  transform: translateY(1px);
 }
 
 /* Button Colors */
 #rock {
-    background-color: rgba(204, 0, 0, 0.7);
+  background-color: rgba(204, 0, 0, 0.7);
 }
 
 #paper {
-    background-color: rgba(0, 204, 0, 0.7);
+  background-color: rgba(0, 204, 0, 0.7);
 }
 
 #scissors {
-    background-color: rgba(0, 0, 204, 0.7);
+  background-color: rgba(0, 0, 204, 0.7);
 }
 
 #resetGame {
-    background-color: rgba(204, 102, 0, 0.7);
+  background-color: rgba(204, 102, 0, 0.7);
 }
 
 /* Button Group */
 #buttonGroup {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
 }
 
 /* Score Display */
 #gameScore {
-    display: flex;
-    justify-content: space-between;
-    width: 300px;
-    margin-bottom: 20px;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 10px;
-    border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin-bottom: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 10px;
 }
 
-#computerPoint, #playerPoint {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 0 10px;
+#computerPoint,
+#playerPoint {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 10px;
 }
 
 /* Results and Winner Display */
-#roundResults, #gameWinner {
-    padding: 20px;
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 0.6);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 10px 0;
-    text-align: center;
-    width: 80%;
+#roundResults,
+#gameWinner {
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+  text-align: center;
+  width: 80%;
 }
